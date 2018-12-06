@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Lista de pedidos";
+}
+
+
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h2>Lista de pedidos</h2>
+        <hr />
+        <h2>Mi Órden</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ul id="items" class="list-group"></ul>
+            </div>
+            <div class="panel-footer"><strong>Total : <span id="Total"></span></strong> </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/ShoppingCart/Pedido.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            Pedido.GetPedidoByClient("VISITANTE",201805);
+        })
+    </script>
+}
+

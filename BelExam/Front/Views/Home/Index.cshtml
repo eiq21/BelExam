@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Bienvenido al carrito de compras de Belcorp";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron header-search">
+                <h4 class="display-4">ENCUENTRA LOS MEJORES PRODUCTOS DE BELLEZA AL MEJOR PRECIO!</h4>
+                <div class="input-group">
+                    <input type="text"  id="txtSearch" class="form-control" placeholder="Escriba el producto que desea buscar..." />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <button id="btnBuscar" type="button" class="btn btn-warning" style="margin-top: 5px;">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tagCart" class="row">
+       
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/ShoppingCart/Producto.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            Producto.search("");
+
+            Producto.setEvents();
+        })
+    </script>
+}
+
